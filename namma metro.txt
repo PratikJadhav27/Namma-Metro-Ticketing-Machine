@@ -1,0 +1,13 @@
+create database namma_metro;
+
+use namma_metro;
+
+create table no_of_people(
+    -> boarding_station char(50),
+    -> departure_station char(50));
+
+
+select boarding_station, count(*) as count FROM no_of_people GROUP BY boarding_station;
+
+
+select count(boarding_station) from no_of_people where boarding_station = "South End Circle";
